@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Header Section -->
     <header
-      class="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-yellow-300 bg-opacity-70 px-[10%] py-4 backdrop-blur-sm"
+      class="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-transparent bg-opacity-70 px-[10%] py-4 backdrop-blur-sm"
     >
-      <a class="text-xl font-bold" href="">Jovahn</a>
+      <a class="text-xl font-bold text-mainColor" href="">Jovahn</a>
 
       <nav>
         <ul>
@@ -38,30 +47,46 @@
         </ul>
       </nav>
 
-      <a href="#" class="cta">Contact</a>
+      <a href="#" class="cta bg-mainColor">Contact</a>
     </header>
 
     <!-- Hero Section -->
-    <section class="">
-      <div class="">
-        <h3>Hi, Myself</h3>
-        <h1>Jovahn</h1>
-        <h3>I'm a <span>Front Developer</span></h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
-          quo nam neque, unde nostrum hic! Aperiam iste eius quo consequuntur.
+    <section class="relative flex h-screen px-[10%]">
+      <div class="relative flex w-1/2 flex-col justify-center">
+        <h2 class="py-2 text-3xl font-semibold text-mainColor">Jovahn</h2>
+        <h3 class="py-2 text-2xl">I'm a <span>Web Developer</span></h3>
+        <p class="py-5 text-base leading-8 text-gray-800">
+          Experienced web developer with a passion for creating visually
+          stunning and user-friendly websites.
         </p>
 
-        <div>
-          <a href=""></a>
-          <a href=""></a>
-          <a href=""></a>
-          <a href=""></a>
+        <a href="#" class="cta h-fit w-fit bg-mainColor">Contact Me</a>
+
+        <div class="flex gap-8 py-3 text-xl text-mainColor">
+          <a
+            href=""
+            class="flex h-10 w-10 items-center justify-center rounded-full shadow transition-all duration-300 hover:bg-mainColor hover:text-white"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href=""
+            class="flex h-10 w-10 items-center justify-center rounded-full shadow transition-all duration-300 hover:bg-mainColor hover:text-white"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href=""
+            class="flex h-10 w-10 items-center justify-center rounded-full shadow transition-all duration-300 hover:bg-mainColor hover:text-white"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
         </div>
       </div>
 
-      <div class="">
-        <img src="" alt="" />
+      <div class="relative flex w-1/2 flex-col justify-center">
+        <img
+          src="dist/img/light.png"
+          class="h-fit w-fit rounded-full border-2 border-mainColor"
+          alt=""
+        />
       </div>
     </section>
 
