@@ -9,6 +9,7 @@
   }
   body {
     /* @apply bg-[#24252A] text-white; */
+    @apply bg-black;
     font-family: "Poppins", sans-serif;
   }
   section {
@@ -18,7 +19,7 @@
 
 @layer components {
   .cta {
-    @apply relative mb-2 me-2 rounded-lg bg-[#7d2ae8] px-5 py-2.5 text-sm font-normal text-white shadow-[0_5px_10px_rgba(0,0,0,0.1)] transition-transform duration-200 ease-in;
+    @apply relative mb-2 me-2 rounded-lg bg-[#7d2ae8] px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_5px_10px_rgba(0,0,0,0.1)] transition-transform duration-200 ease-in;
   }
 
   .cta:active {
@@ -171,4 +172,31 @@
 }
 
 @layer utilities {
+  .card {
+    @apply relative h-36 w-36 overflow-hidden bg-[#2d2d2d];
+  }
+  .card::before {
+    content: "";
+    @apply absolute left-[--x] top-[--y] h-64 w-64 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-all duration-500 hover:opacity-100;
+    background: radial-gradient(#00abf0, transparent, transparent);
+    transitiion:
+      top 0s,
+      left 0s;
+  }
+  .card::after {
+    content: "";
+    @apply absolute inset-[2px] bg-[#2d2d2d]/90;
+  }
+}
+
+.image {
+  border-radius: 55% 45% 55% 45%;
+  animation: imgFloat 5s ease-in-out infinite;
+}
+
+@keyframes imgFloat {
+  50% {
+    transform: translateY(10px);
+    border-radius: 45% 55% 45% 55%;
+  }
 }
