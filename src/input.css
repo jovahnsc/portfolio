@@ -172,21 +172,6 @@
 }
 
 @layer utilities {
-  .card {
-    @apply relative h-36 w-36 overflow-hidden bg-[#2d2d2d];
-  }
-  .card::before {
-    content: "";
-    @apply absolute left-[--x] top-[--y] h-64 w-64 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-all duration-500 hover:opacity-100;
-    background: radial-gradient(#00abf0, transparent, transparent);
-    transitiion:
-      top 0s,
-      left 0s;
-  }
-  .card::after {
-    content: "";
-    @apply absolute inset-[2px] bg-[#2d2d2d]/90;
-  }
 }
 
 .image {
