@@ -10,11 +10,13 @@ cta.forEach((el) => {
   });
 });
 
-const cards = document.querySelectorAll('.card');
+document.getElementById("cards").onmousemove = (e) => {
+  for (const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
 
-cards.forEach((el) => {
-  el.addEventListener("mousemove", function () {
-    el.style.left = el.pageX + 'px';
-    el.style.top = el.pageY + 'px';
-  });
-});
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  }
+};

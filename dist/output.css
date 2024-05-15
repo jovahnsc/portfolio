@@ -454,7 +454,8 @@ html{
 
 body {
   /* @apply bg-[#24252A] text-white; */
-  /* @apply bg-black; */
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   font-family: "Poppins", sans-serif;
 }
 
@@ -799,6 +800,10 @@ section{
   height: 2.5rem;
 }
 
+.h-44{
+  height: 11rem;
+}
+
 .h-64{
   height: 16rem;
 }
@@ -807,16 +812,8 @@ section{
   height: 24rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-screen{
   height: 100vh;
-}
-
-.h-44{
-  height: 11rem;
 }
 
 .w-1\/5{
@@ -829,6 +826,10 @@ section{
 
 .w-2\/5{
   width: 40%;
+}
+
+.w-44{
+  width: 11rem;
 }
 
 .w-64{
@@ -846,10 +847,6 @@ section{
 
 .w-full{
   width: 100%;
-}
-
-.w-44{
-  width: 11rem;
 }
 
 .grid-cols-3{
@@ -870,10 +867,6 @@ section{
 
 .justify-between{
   justify-content: space-between;
-}
-
-.justify-items-center{
-  justify-items: center;
 }
 
 .gap-2{
@@ -930,10 +923,6 @@ section{
 
 .bg-opacity-70{
   --tw-bg-opacity: 0.7;
-}
-
-.bg-opacity-0{
-  --tw-bg-opacity: 0;
 }
 
 .bg-clip-padding{
@@ -995,6 +984,11 @@ section{
   line-height: 2.25rem;
 }
 
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1021,6 +1015,36 @@ section{
   line-height: 2rem;
 }
 
+.text-\[\#2096f3\]{
+  --tw-text-opacity: 1;
+  color: rgb(32 150 243 / var(--tw-text-opacity));
+}
+
+.text-\[\#777bb3\]{
+  --tw-text-opacity: 1;
+  color: rgb(119 123 179 / var(--tw-text-opacity));
+}
+
+.text-\[\#8ec652\]{
+  --tw-text-opacity: 1;
+  color: rgb(142 198 82 / var(--tw-text-opacity));
+}
+
+.text-\[\#F9322B\]{
+  --tw-text-opacity: 1;
+  color: rgb(249 50 43 / var(--tw-text-opacity));
+}
+
+.text-\[\#FC4909\]{
+  --tw-text-opacity: 1;
+  color: rgb(252 73 9 / var(--tw-text-opacity));
+}
+
+.text-\[\#ffdf00\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 223 0 / var(--tw-text-opacity));
+}
+
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1045,12 +1069,6 @@ section{
 
 .backdrop-blur-xl{
   --tw-backdrop-blur: blur(24px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.backdrop-blur-md{
-  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -1084,6 +1102,76 @@ section{
     transform: translateY(10px);
     border-radius: 45% 55% 45% 55%;
   }
+}
+
+#cards {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  gap: 8px;
+  max-width: 916px;
+  width: calc(100% - 20px);
+}
+
+#cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 260px;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: #171717;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
 }
 
 .hover\:bg-mainColor:hover{
