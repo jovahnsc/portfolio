@@ -9,3 +9,12 @@ cta.forEach((el) => {
     }, 600);
   });
 });
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach((el) => {
+  el.addEventListener("mousemove", function () {
+    el.style.left = el.pageX + 'px';
+    el.style.top = el.pageY + 'px';
+  });
+});
