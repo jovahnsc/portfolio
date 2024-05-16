@@ -9,17 +9,17 @@
   }
   body {
     /* @apply bg-[#24252A] text-white; */
-    /* @apply bg-black; */
+    @apply bg-black;
     font-family: "Poppins", sans-serif;
   }
   section {
-    @apply py-24;
+    /* @apply py-24; */
   }
 }
 
 @layer components {
   .cta {
-    @apply relative mb-2 me-2 rounded-lg bg-[#7d2ae8] px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_5px_10px_rgba(0,0,0,0.1)] transition-transform duration-200 ease-in;
+    @apply relative mb-2 me-2 rounded-lg bg-mainColor px-6 py-3 text-center text-sm font-semibold text-white shadow-[0_5px_10px_rgba(0,0,0,0.1)] transition-transform duration-200 ease-in;
   }
 
   .cta:active {
@@ -162,19 +162,13 @@
 }
 
 @layer utilities {
-}
-
-.image {
-  @apply animate-imgFloat rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%];
-  /* animation: imgFloat 5s ease-in-out infinite; */
-}
-
-/* @keyframes imgFloat {
-  50% {
-    @apply rounded-bl-[65%] rounded-br-[40%] rounded-tl-[40%] rounded-tr-[65%];
-    transform: translateY(10px);
+  .nav-link {
+    @apply text-base font-medium transition-all duration-300 ease-in hover:text-[#0088a9];
   }
-} */
+  .social-link {
+    @apply flex h-10 w-10 items-center justify-center rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-mainColor hover:text-white;
+  }
+}
 
 .card {
   @apply relative flex h-44 w-44 flex-col rounded-lg bg-[#00abf0]/10;
@@ -203,12 +197,12 @@
 .card::after {
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.8),
     transparent 40%
   );
   @apply z-10;
 }
 
 .card-content {
-  @apply absolute inset-px z-20 flex grow flex-col items-center justify-center rounded-lg bg-[#171717];
+  @apply absolute inset-px z-20 flex grow flex-col items-center justify-center rounded-lg bg-[#171717] text-white;
 }
