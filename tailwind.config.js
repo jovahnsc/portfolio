@@ -18,6 +18,21 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+      },
+      animation: {
+        imgFloat: 'imgFloat 5s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)', backgroundsize: '10%' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        imgFloat: {
+          '50%': {
+            transform: 'translateY(10px)',
+            borderRadius: '40% 65% 40% 65%'
+          },
+        },
       }
     }
   },

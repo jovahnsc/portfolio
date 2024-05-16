@@ -9,7 +9,7 @@
   }
   body {
     /* @apply bg-[#24252A] text-white; */
-    @apply bg-black;
+    /* @apply bg-black; */
     font-family: "Poppins", sans-serif;
   }
   section {
@@ -51,16 +51,6 @@
       10% 10%,
       15% 15%,
       18% 18%;
-    background-position:
-      5% 90%,
-      10% 90%,
-      10% 90%,
-      15% 90%,
-      25% 90%,
-      25% 90%,
-      40% 90%,
-      55% 90%,
-      70% 90%;
     animation: greentopBubbles ease-in-out 0.6s forwards infinite;
   }
 
@@ -175,55 +165,30 @@
 }
 
 .image {
-  border-radius: 55% 45% 55% 45%;
-  animation: imgFloat 5s ease-in-out infinite;
+  @apply animate-imgFloat rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%];
+  /* animation: imgFloat 5s ease-in-out infinite; */
 }
 
-@keyframes imgFloat {
+/* @keyframes imgFloat {
   50% {
+    @apply rounded-bl-[65%] rounded-br-[40%] rounded-tl-[40%] rounded-tr-[65%];
     transform: translateY(10px);
-    border-radius: 45% 55% 45% 55%;
   }
-}
-
-#cards {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  gap: 8px;
-  max-width: 916px;
-  width: calc(100% - 20px);
-}
-
-#cards:hover > .card::after {
-  opacity: 1;
-}
+} */
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  height: 260px;
-  flex-direction: column;
-  position: relative;
-  width: 300px;
-}
-
-.card:hover::before {
-  opacity: 1;
+  @apply relative flex h-44 w-44 flex-col rounded-lg bg-[#00abf0]/10;
 }
 
 .card::before,
 .card::after {
-  border-radius: inherit;
   content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
-  width: 100%;
+  @apply absolute left-0 top-0 h-full w-full rounded-lg opacity-0 transition-all duration-500;
+}
+
+.card::after,
+.card:hover::before {
+  @apply opacity-100;
 }
 
 .card::before {
@@ -232,7 +197,7 @@
     rgba(255, 255, 255, 0.06),
     transparent 40%
   );
-  z-index: 3;
+  @apply z-30;
 }
 
 .card::after {
@@ -241,17 +206,9 @@
     rgba(255, 255, 255, 0.4),
     transparent 40%
   );
-  z-index: 1;
+  @apply z-10;
 }
 
-.card > .card-content {
-  background-color: #171717;
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  inset: 1px;
-  padding: 10px;
-  position: absolute;
-  z-index: 2;
+.card-content {
+  @apply absolute inset-px z-20 flex grow flex-col items-center justify-center rounded-lg bg-[#171717];
 }
