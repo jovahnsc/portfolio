@@ -25,7 +25,6 @@ module.exports = {
       keyframes: {
         imgFloat: {
           "50%": {
-            transform: "translateY(10px)",
             borderRadius: "40% 65% 40% 65%",
           },
         },

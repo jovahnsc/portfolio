@@ -454,13 +454,13 @@ html{
 
 body {
   /* @apply bg-[#24252A] text-white; */
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  /* @apply bg-black; */
   font-family: "Poppins", sans-serif;
 }
 
-section {
-  /* @apply py-24; */
+section{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 *, ::before, ::after{
@@ -591,15 +591,21 @@ section {
   --tw-shadow: 0 5px 10px rgba(0,0,0,0.1);
   --tw-shadow-colored: 0 5px 10px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: transform;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.cta:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cta:active{
-  --tw-scale-x: 0.96;
-  --tw-scale-y: 0.96;
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -752,6 +758,10 @@ section {
   position: fixed;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
 }
@@ -762,6 +772,14 @@ section {
 
 .top-0{
   top: 0px;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
+.top-1\/2{
+  top: 50%;
 }
 
 .z-50{
@@ -797,6 +815,14 @@ section {
   height: 100vh;
 }
 
+.h-\[180px\]{
+  height: 180px;
+}
+
+.h-48{
+  height: 12rem;
+}
+
 .w-1\/5{
   width: 20%;
 }
@@ -826,9 +852,30 @@ section {
   width: 100%;
 }
 
+.w-\[150px\]{
+  width: 150px;
+}
+
+.w-40{
+  width: 10rem;
+}
+
+.w-\[250px\]{
+  width: 250px;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2{
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes imgFloat{
   50%{
-    transform: translateY(10px);
     border-radius: 40% 65% 40% 65%;
   }
 }
@@ -877,6 +924,10 @@ section {
   border-radius: 0.375rem;
 }
 
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
 .rounded-bl-\[40\%\]{
   border-bottom-left-radius: 40%;
 }
@@ -893,8 +944,32 @@ section {
   border-top-right-radius: 40%;
 }
 
+.rounded-tl-md{
+  border-top-left-radius: 0.375rem;
+}
+
+.rounded-tr-md{
+  border-top-right-radius: 0.375rem;
+}
+
 .border{
   border-width: 1px;
+}
+
+.border-4{
+  border-width: 4px;
+}
+
+.border-8{
+  border-width: 8px;
+}
+
+.border-t-2{
+  border-top-width: 2px;
+}
+
+.border-solid{
+  border-style: solid;
 }
 
 .border-gray-100{
@@ -902,9 +977,23 @@ section {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
-.bg-\[\#6fd4fc\]{
+.border-gray-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-t-transparent{
+  border-top-color: transparent;
+}
+
+.bg-gray-200{
   --tw-bg-opacity: 1;
-  background-color: rgb(111 212 252 / var(--tw-bg-opacity));
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .bg-gray-900{
@@ -912,16 +1001,13 @@ section {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-transparent{
-  background-color: transparent;
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10{
   --tw-bg-opacity: 0.1;
-}
-
-.bg-opacity-70{
-  --tw-bg-opacity: 0.7;
 }
 
 .bg-clip-padding{
@@ -958,6 +1044,11 @@ section {
   padding-bottom: 1.25rem;
 }
 
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -968,9 +1059,9 @@ section {
   line-height: 2rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-6xl{
@@ -978,9 +1069,9 @@ section {
   line-height: 1;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl{
@@ -992,8 +1083,8 @@ section {
   font-weight: 700;
 }
 
-.font-semibold{
-  font-weight: 600;
+.font-extrabold{
+  font-weight: 800;
 }
 
 .leading-8{
@@ -1055,16 +1146,10 @@ section {
   color: rgb(0 171 240 / var(--tw-text-opacity));
 }
 
-.shadow-\[0_2px_5px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{
-  --tw-shadow: 0 2px 5px rgba(0,0,0,0.25);
-  --tw-shadow-colored: 0 2px 5px var(--tw-shadow-color);
+.shadow-\[0_0px_10px_rgba\(0\2c 0\2c 0\2c 0\.09\)\]{
+  --tw-shadow: 0 0px 10px rgba(0,0,0,0.09);
+  --tw-shadow-colored: 0 0px 10px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.backdrop-blur-sm{
-  --tw-backdrop-blur: blur(4px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-xl{
@@ -1078,9 +1163,15 @@ section {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .nav-link{
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 500;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1109,6 +1200,9 @@ section {
 }
 
 .social-link:hover{
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
   background-color: rgb(0 171 240 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -1122,7 +1216,6 @@ section {
   width: 11rem;
   flex-direction: column;
   border-radius: 0.5rem;
-  background-color: rgb(0 171 240 / 0.1);
 }
 
 .card::before,
@@ -1148,7 +1241,7 @@ section {
 .card::before {
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.06),
     transparent 40%
   );
   z-index: 30;
@@ -1157,7 +1250,7 @@ section {
 .card::after {
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.8),
+    rgba(0, 0, 0, 0.8),
     transparent 40%
   );
   z-index: 10;
@@ -1173,8 +1266,44 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
+  border-width: 1px;
   --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+
+/* .card {
+  @apply relative flex h-44 w-44 flex-col rounded-lg bg-[#fff]/10;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  @apply absolute left-0 top-0 h-full w-full rounded-lg opacity-0 transition-all duration-500;
+}
+
+.card::after,
+.card:hover::before {
+  @apply opacity-100;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  @apply z-30;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.8),
+    transparent 40%
+  );
+  @apply z-10;
+}
+
+.card-content {
+  @apply absolute inset-px z-20 flex grow flex-col items-center justify-center rounded-lg bg-[#171717] text-white;
+} */

@@ -21,37 +21,31 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header
-      class="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-transparent bg-opacity-70 px-[10%] py-4 backdrop-blur-sm"
+    <nav
+      class="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-white px-[10%] py-6 shadow-[0_0px_10px_rgba(0,0,0,0.09)]"
     >
-      <a class="text-xl font-bold text-mainColor" href="">Jovahn</a>
+      <a class="text-lg font-bold text-mainColor" href="">Jovahn</a>
 
-      <nav>
-        <ul class="flex gap-10">
-          <li class="">
-            <a href="" class="nav-link">About</a>
-          </li>
-          <li class="">
-            <a href="" class="nav-link">Skills</a>
-          </li>
-          <li class="">
-            <a href="" class="nav-link">Projects</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="flex gap-10">
+        <li class="">
+          <a href="" class="nav-link">About</a>
+        </li>
+        <li class="">
+          <a href="#tech" class="nav-link">Tech</a>
+        </li>
+        <li class="">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+      </ul>
 
       <a href="#" class="text-2xl"><i class="ri-moon-line"></i></a>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="relative flex h-screen px-[10%]">
+    <section class="relative mx-auto flex h-screen px-[10%]">
       <div
         class="flex w-1/5 flex-col items-center justify-center gap-5 py-3 text-xl text-mainColor"
       >
-        <a href="" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="" class="social-link"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
         <a href="" class="social-link"><i class="fa-brands fa-github"></i></a>
         <a href="" class="social-link"
           ><i class="fa-brands fa-linkedin-in"></i
@@ -59,11 +53,10 @@
       </div>
 
       <div class="relative flex w-2/5 flex-col justify-center">
-        <h2 class="py-2 text-3xl font-semibold text-mainColor">Jovahn</h2>
-        <h3 class="py-2 text-2xl">I'm a <span>Web Developer</span></h3>
-        <p class="py-5 text-base leading-8 text-gray-800">
-          Experienced web developer with a passion for creating visually
-          stunning and user-friendly websites.
+        <h1 class="py-2 text-6xl font-extrabold">Web Developer</h1>
+        <p class="py-5 text-lg leading-8 text-gray-800">
+          Hi, I'm Jovahn. A passionate Web Developer based in Singkawang,
+          Indonesia.
         </p>
 
         <a href="#" class="cta w-fit">Contact Me</a>
@@ -71,7 +64,7 @@
 
       <div class="flex w-2/5 items-center justify-center">
         <div
-          class="h-64 w-64 animate-imgFloat overflow-hidden rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%] bg-[#6fd4fc] shadow-[0_2px_5px_rgba(0,0,0,0.25)]"
+          class="h-64 w-64 animate-imgFloat overflow-hidden rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%] border-4 border-gray-500 bg-gray-200"
         >
           <img
             src="dist/img/light.png"
@@ -82,78 +75,95 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Tech Section -->
     <section
       class="relative flex h-screen flex-col items-center justify-center px-[10%]"
+      id="tech"
     >
-      <h1 class="mx-auto py-2 text-3xl font-semibold text-mainColor">Skill</h1>
+      <h1 class="mx-auto py-4 text-4xl font-bold">Tech Stack</h1>
 
       <div class="mx-auto grid grid-cols-3 gap-2 py-8" id="cards">
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>HTML 5</h2>
-            <i class="fa-brands fa-html5 text-6xl text-[#FC4909]"></i>
+            <i class="fa-brands fa-html5 text-6xl text-[#FC4909]"> </i>
+            <p>HTML 5</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>CSS 3</h2>
             <i class="fa-brands fa-css3-alt text-6xl text-[#2096f3]"></i>
+            <p>CSS 3</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>Javascript</h2>
             <i
               class="fa-brands fa-square-js text-dark text-6xl text-[#ffdf00]"
             ></i>
+            <p>Javascript</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>PHP</h2>
             <i class="fa-brands fa-php text-6xl text-[#777bb3]"></i>
+            <p>PHP</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>NodeJS</h2>
             <i class="fa-brands fa-node-js text-6xl text-[#8ec652]"></i>
+            <p>NodeJS</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>Tailwind</h2>
             <i class="ri-tailwind-css-fill text-6xl text-[#37BCF8]"></i>
+            <p>Tailwind</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>Laravel</h2>
             <i class="fa-brands fa-laravel text-6xl text-[#F9322B]"></i>
+            <p>Laravel</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>Bootstrap</h2>
             <i class="fa-brands fa-bootstrap text-6xl text-[#7e11f7]"></i>
+            <p>Bootstrap</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <!-- flex h-44 w-44 flex-col items-center justify-center rounded-md border border-gray-100 bg-gray-900 bg-opacity-10 bg-clip-padding backdrop-blur-xl backdrop-filter -->
-            <h2>Git</h2>
             <i class="fa-brands fa-git-alt text-6xl text-[#f54d27]"></i>
+            <p>Git</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      class="relative flex h-screen flex-col items-center px-[10%]"
+      id="projects"
+    >
+      <h1 class="py-8 text-6xl font-bold">Coming Soon</h1>
+      <p>New Project is Brewing</p>
+      <div class="relative flex w-[250px] items-center justify-between">
+        <div class="📦"></div>
+        <div class="📦"></div>
+        <div class="📦"></div>
+        <div class="📦"></div>
+        <div class="📦"></div>
       </div>
     </section>
 
