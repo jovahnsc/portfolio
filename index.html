@@ -28,7 +28,7 @@
 
       <ul class="flex gap-10">
         <li class="">
-          <a href="" class="nav-link">About</a>
+          <a href="#about" class="nav-link">About</a>
         </li>
         <li class="">
           <a href="#tech" class="nav-link">Tech</a>
@@ -42,7 +42,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative mx-auto flex h-screen px-[10%]">
+    <section class="relative mx-auto flex h-screen px-[10%]" id="about">
       <div
         class="flex w-1/5 flex-col items-center justify-center gap-5 py-3 text-xl text-mainColor"
       >
@@ -93,58 +93,58 @@
       <div class="mx-auto grid grid-cols-3 gap-2 py-8" id="cards">
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-html5 text-4xl text-[#FC4909]"> </i>
+            <i class="fa-brands fa-html5 text-3xl text-[#FC4909]"> </i>
             <p>HTML 5</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <i
-              class="fa-brands fa-square-js text-dark text-4xl text-[#ffdf00]"
+              class="fa-brands fa-square-js text-dark text-3xl text-[#ffdf00]"
             ></i>
             <p>Javascript</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-php text-4xl text-[#777bb3]"></i>
+            <i class="fa-brands fa-php text-3xl text-[#777bb3]"></i>
             <p>PHP</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-css3-alt text-4xl text-[#2096f3]"></i>
+            <i class="fa-brands fa-css3-alt text-3xl text-[#2096f3]"></i>
             <p>CSS 3</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-bootstrap text-4xl text-[#7e11f7]"></i>
+            <i class="fa-brands fa-bootstrap text-3xl text-[#7e11f7]"></i>
             <p>Bootstrap</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="ri-tailwind-css-fill text-4xl text-[#37BCF8]"></i>
+            <i class="ri-tailwind-css-fill text-3xl text-[#37BCF8]"></i>
             <p>Tailwind</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-laravel text-4xl text-[#F9322B]"></i>
+            <i class="fa-brands fa-laravel text-3xl text-[#F9322B]"></i>
             <p>Laravel</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-node-js text-4xl text-[#8ec652]"></i>
+            <i class="fa-brands fa-node-js text-3xl text-[#8ec652]"></i>
             <p>NodeJS</p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-git-alt text-4xl text-[#f54d27]"></i>
+            <i class="fa-brands fa-git-alt text-3xl text-[#f54d27]"></i>
             <p>Git</p>
           </div>
         </div>
@@ -156,18 +156,40 @@
       class="relative flex h-screen flex-col items-center gap-5 px-[10%]"
       id="projects"
     >
-      <div
-        class="flex h-48 w-full justify-center rounded-lg border border-gray-100 shadow-lg"
-      >
-        <div class="flex justify-center">
-          <h2>Sinar Pagi</h2>
-          <p></p>
+      <h1 class="mx-auto py-4 text-4xl font-bold">Projects</h1>
+      <div class="flex w-full items-center justify-center p-4">
+        <div class="w-1/2 px-2 text-center">
+          <h2 class="pb-2 text-base font-semibold uppercase">Sinar Pagi</h2>
+          <p class="text-sm font-light">
+            Sinar Pagi website is an online jewelry collection store.
+          </p>
+
+          <h2 class="pt-4 text-sm font-semibold">TailwindCSS</h2>
+
+          <div class="flex items-center justify-center gap-5 text-xl">
+            <a
+              href="https://github.com/jovahnsc/sinar-pagi"
+              target="_blank"
+              class="flex h-10 w-10 items-center justify-center transition-all duration-300 hover:scale-125"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://jovahnsc.github.io/sinar-pagi/"
+              target="_blank"
+              class="flex h-10 w-10 items-center justify-center transition-all duration-300 hover:scale-125"
+              ><i class="fa-solid fa-up-right-from-square"></i
+            ></a>
+          </div>
         </div>
-        <div class="h-32 w-32 bg-yellow-500">
-          <!-- <img src="" alt="" /> -->
-        </div>
+        <a
+          href="https://jovahnsc.github.io/sinar-pagi/"
+          target="_blank"
+          class="w-1/2 rounded-md shadow-sm transition-all duration-500 ease-in-out hover:scale-105"
+        >
+          <img src="dist/img/sinar-pagi.png" alt="" />
+        </a>
       </div>
-      <h1 class="pb-36 pt-8 text-6xl font-bold">Coming Soon</h1>
+
       <p>New Project is Brewing</p>
       <div class="relative flex w-[250px] items-center justify-between">
         <div class="📦"></div>
@@ -179,9 +201,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bottom-0 w-full bg-mainColor py-8">
+    <footer class="bottom-0 w-full bg-mainColor py-2">
       <div
-        class="flex items-center justify-center gap-5 py-3 text-xl text-white"
+        class="flex items-center justify-center gap-5 py-2 text-xl text-white"
       >
         <a
           href=""
@@ -194,9 +216,7 @@
           ><i class="fa-brands fa-linkedin-in"></i
         ></a>
       </div>
-      <p class="py-3 text-center text-white">
-        Jovahn © 2024 - All Rights Reserved
-      </p>
+      <p class="text-center text-white">Jovahn © 2024 - All Rights Reserved</p>
     </footer>
 
     <!-- <div class="flex items-center justify-center w-full">

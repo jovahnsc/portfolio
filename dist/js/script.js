@@ -20,3 +20,28 @@ document.getElementById("cards").onmousemove = (e) => {
     card.style.setProperty("--mouse-y", `${y}px`);
   }
 };
+
+// Scroll Sections Active Link
+const activeLink = () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  let current = "about";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+
+    if (this.scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((item) => {
+    item.classList.remove("text-mainColor");
+    if (item.href.includes(current)) {
+      item.classList.add("text-mainColor");
+    }
+  });
+};
+
+window.addEventListener("scroll", activeLink);

@@ -163,15 +163,24 @@
 
 @layer utilities {
   .nav-link {
-    @apply text-lg font-medium transition-all duration-300 ease-in hover:text-[#0088a9];
+    @apply relative text-lg font-medium transition-all duration-300 ease-in hover:text-mainColor;
   }
+
+  .nav-link {
+    @apply after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-0 after:rounded-sm after:bg-mainColor after:transition-all after:duration-300 after:content-[""] after:hover:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-mainColor;
+  }
+
   .social-link {
     @apply flex h-10 w-10 items-center justify-center rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-125 hover:bg-mainColor hover:text-white;
   }
 }
 
 .card {
-  @apply relative flex h-28 w-28 flex-col rounded-lg;
+  @apply relative flex h-32 w-32 flex-col rounded-lg;
 }
 
 .card::before,
