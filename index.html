@@ -27,7 +27,7 @@
     >
       <a class="text-lg font-bold text-mainColor" href="">Jovahn</a>
 
-      <ul class="flex gap-10">
+      <ul class="hidden gap-10 md:flex">
         <li class="">
           <a href="#about" class="nav-link">About</a>
         </li>
@@ -43,9 +43,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative mx-auto flex h-screen px-[10%]" id="about">
+    <section
+      class="relative flex h-dvh flex-col items-center justify-center px-[10%] md:flex-row"
+      id="about"
+    >
       <div
-        class="flex w-1/5 flex-col items-center justify-center gap-5 py-3 text-xl text-mainColor"
+        class="order-3 flex flex-row gap-5 py-6 text-xl text-mainColor md:order-none md:w-1/5 md:flex-col"
       >
         <a
           href="https://github.com/jovahnsc/"
@@ -58,26 +61,30 @@
         ></a>
       </div>
 
-      <div class="relative flex w-2/5 flex-col justify-center">
-        <h1 class="py-2 text-6xl font-extrabold">Web Developer</h1>
-        <p class="py-5 text-lg leading-8 text-gray-800">
+      <div
+        class="relative order-2 flex flex-col items-center text-center md:order-none md:w-2/5 md:items-start md:text-left"
+      >
+        <h1 class="text-3xl font-extrabold md:py-2 md:text-6xl">
+          Web Developer
+        </h1>
+        <p class="py-5 text-base leading-8 text-gray-800 md:text-lg">
           Hi, I'm Jovahn. A passionate Web Developer based in Singkawang,
           Indonesia.
         </p>
-        <p class="py-5 text-lg leading-8 text-gray-800">
+        <p class="py-5 text-base leading-8 text-gray-800 md:text-lg">
           My main stack currently is Laravel with TailwindCSS styling.
         </p>
 
         <a href="#" class="cta w-fit">Contact Me</a>
       </div>
 
-      <div class="flex w-2/5 items-center justify-center">
+      <div class="order-1 flex py-8 md:order-none md:w-2/5 md:py-0">
         <div
-          class="h-64 w-64 animate-imgFloat overflow-hidden rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%] border-4 border-gray-500 bg-gray-200"
+          class="h-44 w-44 animate-imgFloat overflow-hidden rounded-bl-[40%] rounded-br-[65%] rounded-tl-[65%] rounded-tr-[40%] border-4 border-gray-500 bg-gray-200 md:h-64 md:w-64"
         >
           <img
             src="dist/img/light.png"
-            class="mx-auto h-96 w-96 object-cover"
+            class="mx-auto h-72 w-72 object-cover md:h-96 md:w-96"
             alt=""
           />
         </div>
@@ -86,66 +93,79 @@
 
     <!-- Tech Section -->
     <section
-      class="relative flex h-screen flex-col items-center justify-center px-[10%]"
+      class="relative flex h-dvh flex-col items-center justify-center px-[10%]"
       id="tech"
     >
-      <h1 class="mx-auto py-4 text-4xl font-bold">Tech Stack</h1>
+      <h1 class="mx-auto py-4 text-3xl font-bold">Tech Stack</h1>
 
-      <div class="mx-auto grid grid-cols-3 gap-2 py-8" id="cards">
+      <div class="mx-auto grid grid-cols-3 gap-1 py-8 md:gap-2" id="cards">
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-html5 text-3xl text-[#FC4909]"> </i>
+            <i class="fa-brands fa-html5 text-xl text-[#FC4909] md:text-3xl">
+            </i>
             <p>HTML 5</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
             <i
-              class="fa-brands fa-square-js text-dark text-3xl text-[#ffdf00]"
+              class="fa-brands fa-square-js text-dark text-xl text-[#ffdf00] md:text-3xl"
             ></i>
             <p>Javascript</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-php text-3xl text-[#777bb3]"></i>
+            <i class="fa-brands fa-php text-xl text-[#777bb3] md:text-3xl"></i>
             <p>PHP</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-css3-alt text-3xl text-[#2096f3]"></i>
+            <i
+              class="fa-brands fa-css3-alt text-xl text-[#2096f3] md:text-3xl"
+            ></i>
             <p>CSS 3</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-bootstrap text-3xl text-[#7e11f7]"></i>
+            <i
+              class="fa-brands fa-bootstrap text-xl text-[#7e11f7] md:text-3xl"
+            ></i>
             <p>Bootstrap</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="ri-tailwind-css-fill text-3xl text-[#37BCF8]"></i>
+            <i
+              class="ri-tailwind-css-fill text-xl text-[#37BCF8] md:text-3xl"
+            ></i>
             <p>Tailwind</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-laravel text-3xl text-[#F9322B]"></i>
+            <i
+              class="fa-brands fa-laravel text-xl text-[#F9322B] md:text-3xl"
+            ></i>
             <p>Laravel</p>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-node-js text-3xl text-[#8ec652]"></i>
+            <i
+              class="fa-brands fa-node-js text-xl text-[#8ec652] md:text-3xl"
+            ></i>
             <p>NodeJS</p>
           </div>
         </div>
 
         <div class="card">
           <div class="card-content">
-            <i class="fa-brands fa-git-alt text-3xl text-[#f54d27]"></i>
+            <i
+              class="fa-brands fa-git-alt text-xl text-[#f54d27] md:text-3xl"
+            ></i>
             <p>Git</p>
           </div>
         </div>
@@ -154,12 +174,16 @@
 
     <!-- Projects -->
     <section
-      class="relative flex h-screen flex-col items-center gap-5 px-[10%]"
+      class="relative flex h-dvh flex-col items-center justify-center gap-5 px-[10%]"
       id="projects"
     >
-      <h1 class="mx-auto py-4 text-4xl font-bold">Projects</h1>
-      <div class="flex w-full items-center justify-center p-4">
-        <div class="w-1/2 px-2 text-center">
+      <h1 class="mx-auto py-4 text-3xl font-bold">Projects</h1>
+      <div
+        class="flex w-full flex-col items-center justify-center p-4 md:flex-row"
+      >
+        <div
+          class="order-2 px-2 py-4 text-center md:order-none md:w-1/2 md:py-0"
+        >
           <h2 class="pb-2 text-base font-semibold uppercase">Sinar Pagi</h2>
           <p class="text-sm font-light">
             Sinar Pagi website is an online jewelry collection store.
@@ -185,19 +209,21 @@
         <a
           href="https://jovahnsc.github.io/sinar-pagi/"
           target="_blank"
-          class="w-1/2 rounded-md shadow-sm transition-all duration-500 ease-in-out hover:scale-105"
+          class="order-1 rounded-md shadow-sm transition-all duration-500 ease-in-out hover:scale-105 md:order-none md:w-1/2"
         >
           <img src="dist/img/sinar-pagi.png" alt="" />
         </a>
       </div>
 
-      <p>New Project is Brewing</p>
-      <div class="relative flex w-[250px] items-center justify-between">
-        <div class="📦"></div>
-        <div class="📦"></div>
-        <div class="📦"></div>
-        <div class="📦"></div>
-        <div class="📦"></div>
+      <div class="flex flex-col items-center gap-5">
+        <p>New Project is Brewing</p>
+        <div class="relative flex w-[250px] items-center justify-between">
+          <div class="📦"></div>
+          <div class="📦"></div>
+          <div class="📦"></div>
+          <div class="📦"></div>
+          <div class="📦"></div>
+        </div>
       </div>
     </section>
 
