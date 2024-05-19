@@ -818,19 +818,6 @@ section {
   height: 18rem;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
-.h-fit{
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-full{
-  height: 100%;
-}
-
 .h-dvh{
   height: 100dvh;
 }
@@ -1657,6 +1644,18 @@ section {
 
   .md\:items-start{
     align-items: flex-start;
+  }
+
+  .md\:items-center{
+    align-items: center;
+  }
+
+  .md\:justify-center{
+    justify-content: center;
+  }
+
+  .md\:justify-evenly{
+    justify-content: space-evenly;
   }
 
   .md\:gap-2{
